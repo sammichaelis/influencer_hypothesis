@@ -1,7 +1,7 @@
 Influencer Hypothesis
 ==============================
 
-See README
+In general, Twitter data has a very small signal to noise ratio for upstream learning tasks. However, we hypothesis that certain users that we call influencers have a significantly higher signal to noise ration. This project explores this hypothesis. 
 
 Project Organization
 ------------
@@ -37,6 +37,7 @@ Project Organization
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
+    |   |   └── auth.json  <-- ** modify this file to include consumer twitter keys **
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features.py
