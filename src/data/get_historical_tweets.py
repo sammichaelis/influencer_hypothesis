@@ -11,11 +11,12 @@ import pandas as pd
 import os.path as path
 import sys
 
+
 #Twitter API credentials
 # Do not leave values hardcoded
 
 
-auth_df = eval(open(  "auth.json").read())
+auth_df = eval(open(path.dirname(__file__) +  "/auth.json").read())
 print(auth_df.keys())
 consumer_key = auth_df['consumer_key']
 consumer_secret = auth_df['consumer_secret']
