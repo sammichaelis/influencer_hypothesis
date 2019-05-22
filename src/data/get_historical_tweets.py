@@ -15,8 +15,7 @@ import sys
 # Do not leave values hardcoded
 
 
-two_up =  path.abspath(path.join(__file__ ,"../../.."))
-auth_df = eval(open( two_up + "/auth.json").read())
+auth_df = eval(open(  "auth.json").read())
 print(auth_df.keys())
 consumer_key = auth_df['consumer_key']
 consumer_secret = auth_df['consumer_secret']
@@ -72,4 +71,7 @@ def get_all_tweets(screen_name, use_pandas = False):
 def test():
     # Prepare to get mad. This man is a tool.
     get_all_tweets("realDonaldTrump", use_pandas=True).to_csv("DJT.csv")
-test()
+
+
+if __name__ == '__main__':
+    test()
